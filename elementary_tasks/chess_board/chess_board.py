@@ -31,6 +31,7 @@ class ChessBoard:
     #         print('Coords must be integer numbers')
 
     def check_int(x):
+        int(x)
         if isinstance(x, int):
             return True
         return False
@@ -62,8 +63,8 @@ class ChessBoard:
             print('Size must be integer numbers')
 
 
-input_width = input("Enter width: ")
-input_height = input("Enter height: ")
-print(input_height)
+input_width = int(input("Enter width: "))
+input_height = int(input("Enter height: "))
+# print(input_height)
 t = ChessBoard(input_width, input_height)
 print(t.chess_board())
