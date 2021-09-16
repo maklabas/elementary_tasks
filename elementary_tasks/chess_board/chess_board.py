@@ -1,12 +1,12 @@
 class ChessBoard:
+    """
+    This class makes chessboard by defining two parameters:
+
+    """
+
     def __init__(self, width, height):
         self.__width = width
         self.__height = height
-
-    def check_int(x):
-        if isinstance(x, int):
-            return True
-        return False
 
     # @property
     # def board_size_height(self):
@@ -29,6 +29,11 @@ class ChessBoard:
     #         pass
     #     else:
     #         print('Coords must be integer numbers')
+
+    def check_int(x):
+        if isinstance(x, int):
+            return True
+        return False
 
     def chess_board(self):
         # height = 4
@@ -57,7 +62,8 @@ class ChessBoard:
             print('Size must be integer numbers')
 
 
-width = input("Enter width: ")
-height = input("Enter height: ")
-t = ChessBoard(width, height)
+input_width = input("Enter width: ")
+input_height = input("Enter height: ")
+print(input_height)
+t = ChessBoard(input_width, input_height)
 print(t.chess_board())
