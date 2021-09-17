@@ -24,12 +24,12 @@ class ChessBoard:
                 res = res + '█░'  # '█░' - one cell pair
 
         # if number of cells is odd - we must add '█'
-        if self.__width % 2 is not True:
+        if self.__width % 2 != 0:
             res = res + '█'
 
         # cycle of creating chessboard
         for i in range(0, self.__height):
-            # if number of cells is even, cycle adds '░' in the begining and removes last cell
+            # if number of cells is even, cycle adds '░' in the beginning and removes last cell
             if i % 2:
                 print('░' + res[:self.__width - 1])
             else:
