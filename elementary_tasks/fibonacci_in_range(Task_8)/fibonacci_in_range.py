@@ -1,10 +1,22 @@
 class FibRange:
+    """
+    This class creates sequence of fibonacci numbers in rage from minimum (start_of_range) to maximum (end_of_range)
+    numbers.
+     Note: minimum and maximum numbers ar not included in returned range.
+    __________
+
+    Parameters:
+        ~ start_of_range - number of start counting fibonacci sequence.
+        ~ end_of_range   - number of start counting fibonacci sequence.
+    """
+
     def __init__(self, start_of_range: int, end_of_range: int):
         self.__start_of_range = start_of_range
         self.__end_of_range = end_of_range
 
     @property
     def count_fibonacci(self):
+        """Returns sequence of fibonacci numbers """
         previous_num = 0
         start_count = 1
         fibbo_num = 0
@@ -27,7 +39,7 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='This is the program that prints fibonacci numbers in definite range.')
 
-    parser.add_argument('start', type=int, default=0, help='Argument that defines start of counting fibonacci')
+    parser.add_argument('start', type=int, help='Argument that defines start of counting fibonacci')
     parser.add_argument('end', type=int, help='Argument that defines end of counting fibonacci')
 
     try:
