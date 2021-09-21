@@ -12,7 +12,7 @@ class ChessBoard:
         self.__width = width
         self.__height = height
 
-    def chess_board(self):
+    def print_chessboard(self):
         """ This function prints chessboard"""
 
         res = ''
@@ -42,6 +42,6 @@ if __name__ == "__main__":
         input_width = int(input("Enter width: "))
         input_height = int(input("Enter height: "))
         t = ChessBoard(input_width, input_height)
-        t.chess_board()
+        t.print_chessboard()
     except ValueError:
         print('Size must be integer numbers')

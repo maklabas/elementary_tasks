@@ -1,3 +1,6 @@
+import csv
+
+
 def summ(num: str):
     """Recursive func that returns sum of numbers in string."""
     return int(num[0]) + summ(num[1:]) if len(num) != 0 else 0
@@ -29,11 +32,11 @@ def check_Moscow(number):
     left_part = num_str[0: int(len(num_str) / 2)]
     right_part = num_str[int(len(num_str) / 2):int(len(num_str))]
 
-    return compare(left_part, right_part)
+    # return compare(left_part, right_part)
+    return summ(val1) == summ(val2)
 
 
 if __name__ == "__main__":
-    import csv
 
     path = input("Enter way to file: ")
 

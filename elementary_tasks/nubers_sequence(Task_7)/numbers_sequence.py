@@ -17,7 +17,7 @@ class NaturalNumbers:
                 self.result.append(i)
 
     @property
-    def show_numbers(self):
+    def numbers(self):
         """Returns string sequence of numbers if they exists"""
         self.list_numbers()
         if self.result:
@@ -37,6 +37,6 @@ if __name__ == '__main__':
     try:
         args = parser.parse_args()
         natural_seq = NaturalNumbers(args.maximum)
-        print(natural_seq.show_numbers)
+        print(natural_seq.numbers)
     except:
         parser.print_help()

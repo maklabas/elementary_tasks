@@ -15,7 +15,7 @@ class FibRange:
         self.__end_of_range = end_of_range
 
     @property
-    def count_fibonacci(self):
+    def fibonacci_sequence(self):
         """Returns sequence of fibonacci numbers """
         previous_num = 0
         start_count = 1
@@ -45,6 +45,7 @@ if __name__ == '__main__':
     try:
         args = parser.parse_args()
         fib = FibRange(args.start, args.end)
-        print(fib.count_fibonacci)
+        print(fib.fibonacci_sequence)
     except:
         parser.print_help()
+

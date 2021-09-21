@@ -1,6 +1,3 @@
-import argparse
-
-
 def text_manipulator(path: str, search_str: str, replace_str: str = None):
     """This func finds string in the text file and replaces it if needed.
     ________
@@ -28,14 +25,16 @@ def text_manipulator(path: str, search_str: str, replace_str: str = None):
         print("File hasn't changed.", e)
 
 
-parser = argparse.ArgumentParser(description='This is the program that searches definite string in the text ')
-
-parser.add_argument('way_to_file', type=str, help='Argument that defines path of text file you want to parse.')
-parser.add_argument('searched_string', type=str, help='Argument that defines string you want to find in the text.')
-parser.add_argument('-r', '--replacing_string', type=str, default=None,
-                    help='Argument that defines string you want to replace in the text.')
-
 if __name__ == "__main__":
+    import argparse
+
+    parser = argparse.ArgumentParser(description='This is the program that searches definite string in the text ')
+
+    parser.add_argument('way_to_file', type=str, help='Argument that defines path of text file you want to parse.')
+    parser.add_argument('searched_string', type=str, help='Argument that defines string you want to find in the text.')
+    parser.add_argument('-r', '--replacing_string', type=str, default=None,
+                        help='Argument that defines string you want to replace in the text.')
+
     try:
         args = parser.parse_args()
         text_manipulator(args.way_to_file, args.searched_string, args.replacing_string)
