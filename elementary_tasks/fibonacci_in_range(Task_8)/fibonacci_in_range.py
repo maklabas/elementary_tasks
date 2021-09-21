@@ -11,8 +11,11 @@ class FibRange:
     """
 
     def __init__(self, start_of_range: int, end_of_range: int):
-        self.__start_of_range = start_of_range
-        self.__end_of_range = end_of_range
+        param_lst = [abs(start_of_range), abs(end_of_range)]
+        param_lst.sort()
+        self.__start_of_range = param_lst[0]
+        self.__end_of_range = param_lst[1]
+
 
     @property
     def fibonacci_sequence(self):
@@ -48,4 +51,3 @@ if __name__ == '__main__':
         print(fib.fibonacci_sequence)
     except:
         parser.print_help()
-

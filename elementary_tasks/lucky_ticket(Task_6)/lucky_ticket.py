@@ -6,11 +6,6 @@ def summ(num: str):
     return int(num[0]) + summ(num[1:]) if len(num) != 0 else 0
 
 
-def compare(val1, val2):
-    """Compares two params"""
-    return True if summ(val1) == summ(val2) else False
-
-
 def check_Piter(number):
     """Divides number on two parts and compares according to Piter system
     (sum of even equals sum of odd numbers)."""
@@ -22,7 +17,7 @@ def check_Piter(number):
             res_odd = res_odd + item
         else:
             res_even = res_even + item
-    return compare(res_even, res_odd)
+    return summ(res_odd) == summ(res_even)
 
 
 def check_Moscow(number):
@@ -32,12 +27,10 @@ def check_Moscow(number):
     left_part = num_str[0: int(len(num_str) / 2)]
     right_part = num_str[int(len(num_str) / 2):int(len(num_str))]
 
-    # return compare(left_part, right_part)
-    return summ(val1) == summ(val2)
+    return summ(left_part) == summ(right_part)
 
 
-if __name__ == "__main__":
-
+def main():
     path = input("Enter way to file: ")
 
     while True:
@@ -60,6 +53,10 @@ if __name__ == "__main__":
                 else:
                     print('\nUnknown marker. Check fieldname of the database file.\nIt must be "Piter" or "Moscow".')
                     break
-        except:
+        except FileNotFoundError:
             print(f'No such file or directory: "{path}". Enter way to file again')
             path = input("Enter way to file: ")
+
+
+if __name__ == "__main__":
+    main()

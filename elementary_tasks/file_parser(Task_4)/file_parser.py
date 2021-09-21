@@ -21,7 +21,7 @@ def text_manipulator(path: str, search_str: str, replace_str: str = None):
 
         with open(path, "w", encoding='utf-8') as text:
             text.write(data)
-    except Exception as e:
+    except FileNotFoundError as e:
         print("File hasn't changed.", e)
 
 

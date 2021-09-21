@@ -6,6 +6,7 @@ class NaturalNumbers:
     Parameters:
         ~ max_num   - Square root of the number defines the last natural number of the sequence
     """
+
     def __init__(self, max_num: int):
         self.max_num = max_num
         self.result = []
@@ -29,7 +30,8 @@ class NaturalNumbers:
 if __name__ == '__main__':
     import argparse
 
-    parser = argparse.ArgumentParser(description='This is the program that prints the sequence of natural numbers.')
+    parser = argparse.ArgumentParser(description='This is the program that prints the sequence of natural numbers.',
+                                     conflict_handler='resolve')
 
     parser.add_argument('maximum', type=int,
                         help='Square root of this number defines the last natural number of the printed sequence')
@@ -39,4 +41,5 @@ if __name__ == '__main__':
         natural_seq = NaturalNumbers(args.maximum)
         print(natural_seq.numbers)
     except:
+
         parser.print_help()
