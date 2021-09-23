@@ -48,6 +48,10 @@ if __name__ == '__main__':
             main(a_1, a_2, b_1, b_2)
         except ValueError as v:
             print("We can't convert " + re.findall("('.+')", v.__str__())[0] + " into a number.")
+        except IndexError:
+            message = '''How to use:
+            '''
+            print("")
 
         guess = input("Do you want to continue? "
                       "(Enter 'YES' or 'Y' to continue)").lower()
