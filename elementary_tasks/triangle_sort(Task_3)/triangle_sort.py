@@ -8,9 +8,9 @@ class Triangle:
     Params:
 
     ~ name - triangle name
-    ~ side_a - first side of triangle
-    ~ side_b - second side of triangle
-    ~ side_c - third side of triangle
+    ~ side_a - first side of triangle;
+    ~ side_b - second side of triangle;
+    ~ side_c - third side of triangle.
     """
     def __init__(self, name: str, side_a: float, side_b: float, side_c: float):
         self.name = name
@@ -21,8 +21,7 @@ class Triangle:
     @property
     def square(self):
         """ Returns dict, which contains name and square of triangle if triangle can be created properly;
-            Neither returns None.
-        """
+            Neither returns None."""
         if self.side_a + self.side_b > self.side_c and self.side_a + self.side_c > self.side_b and \
                 self.side_b + self.side_c > self.side_a:
 
@@ -37,8 +36,9 @@ def show_triangle(tr_dict: dict):
     """Outputs sorted triangles graphically"""
     print("\n============= Triangles list: ===============")
     index = 1
-    # Dictionary sorting
+    # Dict sorting
     tr_dict = {key: value for key, value in sorted(tr_dict.items(), key=lambda item: item[1], reverse=True)}
+    # Dict output
     for tr_name in tr_dict:
         print(f'{index}. [Triangle {tr_name}]: {round(tr_dict[tr_name], 2)} сm')
         index += 1
@@ -48,6 +48,7 @@ def main():
     """ Main logics of program.
     Parses data from string in definite sequence and checks if it valid.
     """
+    # Dict which contains calculated data of triangles
     triangles_data = {}
 
     while True:

@@ -16,9 +16,8 @@ class FibRange:
         self.__start_of_range = param_lst[0]
         self.__end_of_range = param_lst[1]
 
-
     @property
-    def fibonacci_sequence(self):
+    def fibonacci_sequence(self) -> str:
         """Returns sequence of fibonacci numbers """
         previous_num = 0
         start_count = 1

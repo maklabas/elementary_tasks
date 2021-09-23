@@ -1,12 +1,12 @@
 import csv
 
 
-def summ(num: str):
+def summ(num: str) -> int:
     """Recursive func that returns sum of numbers in string."""
     return int(num[0]) + summ(num[1:]) if len(num) != 0 else 0
 
 
-def check_Piter(number):
+def check_Piter(number) -> bool:
     """Divides number on two parts and compares according to Piter system
     (sum of even equals sum of odd numbers)."""
     num_str = str(number)
@@ -20,7 +20,7 @@ def check_Piter(number):
     return summ(res_odd) == summ(res_even)
 
 
-def check_Moscow(number):
+def check_Moscow(number) -> bool:
     """Divides number on two parts and compares according to Moscow system
     (sum of left half numbers equals sum of right half numbers)."""
     num_str = str(number)

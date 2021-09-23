@@ -18,7 +18,7 @@ class NaturalNumbers:
                 self.result.append(i)
 
     @property
-    def numbers(self):
+    def numbers(self) -> str:
         """Returns string sequence of numbers if they exists"""
         self.list_numbers()
         if self.result:

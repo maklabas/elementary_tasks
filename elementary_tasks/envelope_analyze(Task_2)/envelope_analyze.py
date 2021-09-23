@@ -3,6 +3,7 @@ import re
 
 class Envelope:
     """ Class which compares envelopes """
+
     def __init__(self, side_a, side_b):
         self.side_a = side_a
         self.side_b = side_b
@@ -49,11 +50,10 @@ if __name__ == '__main__':
         except ValueError as v:
             print("We can't convert " + re.findall("('.+')", v.__str__())[0] + " into a number.")
         except IndexError:
-            message = '''How to use:
-            '''
-            print("")
+            print('''How to use:\n
+            Enter two sides of the first envelope, then two sides of the second envelope step by step.\n''')
 
-        guess = input("Do you want to continue? "
+        guess = input("Do you want to continue? \n"
                       "(Enter 'YES' or 'Y' to continue)").lower()
-        if guess != 'yes' or 'y':
+        if guess not in ['yes', 'y']:
             break
