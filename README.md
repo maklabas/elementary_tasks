@@ -16,21 +16,21 @@ You can clone and try this project using this command:
     
 - Usage
 
-Several tasks (tasks) of the project uses argparse. To run those tasks, use template:
+Several tasks (Task_4, Task_7, Task_8) of the project uses argparse. To run those tasks, use template:
 
     python3 path/file.py <arguments>
 
 Example:
 
-    python3 tasks/task1/method1.py 8 8
+    python3 elementary_tasks/fibonacci_in_range/fibonacci_in_range.py 8 34
 
-To launch other tasks (tasks) use template witout parameters:
+To launch other tasks (Task_1, Task_2, Task_3, Task_6) use template witout parameters:
 
     python3 path/file.py 
    
 Example:
 
-    python3 tasks/task1/method1.py
+    python3 elementary_tasks/lucky_ticket/lucky_ticket.py
 
 
  
@@ -39,7 +39,7 @@ Tasks Processing
 
 - Current state of implementation:
 
-- Tasks :
+ Tasks :
  - [x] Task 1 (chess_board) 
  - [x] Task 2 (envelope_analyze)
  - [x] Task 3 (trianle_sort)
@@ -49,7 +49,7 @@ Tasks Processing
  - [x] Task 7 (numbers_sequence)
  - [x] Task 8 (fibonacci_in_range)
   
-  - UnitTests :
+   UnitTests :
   - [ ] Task 1 (chess_board) 
   - [ ] Task 2 (envelope_analyze)
   - [ ] Task 3 (trianle_sort)
