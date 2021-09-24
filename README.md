@@ -40,14 +40,14 @@ Tasks Processing
 # Current state of implementation:
 
 - Tasks :
-   [x] Task 1 (chess_board) 
-   [x] Task 2 (envelope_analyze)
-   [x] Task 3 (trianle_sort)
-   [x] Task 4 (file_parser)
-   [] Task 5 ()
-   [x] Task 6 (lucky_ticket)
-   [x] Task 7 (numbers_sequence)
-   [x] Task 8 (fibonacci_in_range)
+ - [x] Task 1 (chess_board) 
+ - [x] Task 2 (envelope_analyze)
+ - [x] Task 3 (trianle_sort)
+ - [x] Task 4 (file_parser)
+ - [] Task 5 ()
+ - [x] Task 6 (lucky_ticket)
+ - [x] Task 7 (numbers_sequence)
+ - [x] Task 8 (fibonacci_in_range)
   
   - UnitTests :
    [] Task 1 (chess_board) 
