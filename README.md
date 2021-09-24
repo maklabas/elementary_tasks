@@ -8,13 +8,13 @@ of SoftServe Python Internship.
 Quick Start
 ===========
 
-# Installation
+- Installation
 
 You can clone and try this project using this command:
 
     git clone https://github.com/maklabas/elementary_tasks.git
     
-# Usage
+- Usage
 
 Several tasks (tasks) of the project uses argparse. To run those tasks, use template:
 
@@ -37,7 +37,7 @@ Example:
 Tasks Processing 
 ===========    
 
-# Current state of implementation:
+- Current state of implementation:
 
 - Tasks :
  - [x] Task 1 (chess_board) 
