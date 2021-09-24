@@ -39,7 +39,7 @@ Tasks Processing
 
 - Current state of implementation:
 
- Tasks :
+  Tasks :
  - [x] Task 1 (chess_board) 
  - [x] Task 2 (envelope_analyze)
  - [x] Task 3 (trianle_sort)
