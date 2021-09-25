@@ -16,7 +16,7 @@ You can clone and try this project using this command:
     
 - Usage
 
-Several tasks (Task_4, Task_7, Task_8) of the project uses argparse. To run those tasks, use template:
+Several tasks (Task_1, Task_4, Task_7, Task_8) of the project uses argparse. To run those tasks, use template:
 
     python3 path/file.py <arguments>
 
@@ -24,7 +24,7 @@ Example:
 
     python3 elementary_tasks/fibonacci_in_range/fibonacci_in_range.py 8 34
 
-To launch other tasks (Task_1, Task_2, Task_3, Task_6) use template witout parameters:
+To launch other tasks (Task_2, Task_3, Task_6) use template witout parameters:
 
     python3 path/file.py 
    
