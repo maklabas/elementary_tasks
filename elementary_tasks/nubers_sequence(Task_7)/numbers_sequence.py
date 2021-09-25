@@ -41,5 +41,4 @@ if __name__ == '__main__':
         natural_seq = NaturalNumbers(args.maximum)
         print(natural_seq.numbers)
     except:
-
         parser.print_help()

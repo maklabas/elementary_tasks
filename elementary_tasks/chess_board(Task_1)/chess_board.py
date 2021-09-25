@@ -38,10 +38,14 @@ class ChessBoard:
 
 
 if __name__ == "__main__":
+    import argparse
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('width', type=int, help='Defines width of chessboard.')
+    parser.add_argument('height', type=int, help='Defines height of chessboard.')
     try:
-        input_width = int(input("Enter width: "))
-        input_height = int(input("Enter height: "))
-        t = ChessBoard(input_width, input_height)
+        args = parser.parse_args()
+        t = ChessBoard(args.width, args.height)
         t.print_chessboard()
-    except ValueError:
-        print('Size must be integer numbers')
+    except :
+        parser.print_help()
