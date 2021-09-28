@@ -3,16 +3,17 @@ import unittest
 from unittest import mock
 from unittest.mock import Mock, patch, call
 
-from coverage import report
+# from coverage import report
 
-from envelope_analyze import Envelope, main
+# from envelope_analyze import Envelope, main
 from chess_board import ChessBoard
 import io
 
 
 class TestChessBoard(unittest.TestCase):
-    @patch('sys.stdout', new_callable=io.StringIO)
-    def test_print_chessboard(self, mock_stdout):
+    @patch('chess_board.print')
+    # @patch('sys.stdout', new_callable=io.StringIO)
+    def test_print_chessboard(self, mocked_print):
         test_cases = [
 
             {
@@ -23,17 +24,18 @@ class TestChessBoard(unittest.TestCase):
                        "░█░█░\n"
                        "█░█░█\n"
             },
-            # {
-            #     "in": {"width": 3, "height": 3},
-            #     "out": "█░█\n"
-            #            "░█░\n"
-            #            "█░█\n"
-            # },
+            {
+                "in": {"width": 3, "height": 3},
+                "out": "█░█\n"
+                       "░█░\n"
+                       "█░█\n"
+            },
         ]
 
         for case in test_cases:
             ChessBoard(**case['in']).print_chessboard()
-            self.assertEqual(case['out'], mock_stdout.getvalue())
+            assert mocked_print.mock_called_once(case['out'])
+            # self.assertEqual(print(case['out']), ChessBoard(**case['in']).print_chessboard())
 
 
 '''class TestChessBoard(unittest.TestCase):
