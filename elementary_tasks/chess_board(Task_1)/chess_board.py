@@ -30,14 +30,14 @@ class ChessBoard:
         # cycle of creating chessboard
         for i in range(0, self.__height):
             # if number of cells is even, cycle adds '░' in the beginning and removes last cell
-            if i % 2:
+            if i % 2 and self.__width != 0:
                 print('░' + res[:self.__width - 1])
             else:
                 # if number of cells is odd - cycle prints original row
                 print(res)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     import argparse
 
     parser = argparse.ArgumentParser()
@@ -47,5 +47,5 @@ if __name__ == "__main__":
         args = parser.parse_args()
         t = ChessBoard(args.width, args.height)
         t.print_chessboard()
-    except :
+    except:
         parser.print_help()
