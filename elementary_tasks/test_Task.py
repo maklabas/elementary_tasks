@@ -30,6 +30,7 @@ class TestChessBoard(unittest.TestCase):
             #            "█░█\n"
             # },
         ]
+
         for case in test_cases:
             ChessBoard(**case['in']).print_chessboard()
             self.assertEqual(case['out'], mock_stdout.getvalue())
