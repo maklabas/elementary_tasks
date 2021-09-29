@@ -26,7 +26,7 @@ class ChessBoard:
         # if number of cells is odd - we must add '█'
         if self.__width % 2 != 0:
             res = res + '█'
-
+        # в пизду. аппендь ёбаную функцию!!!!!!!!!!!!!!!!!!!!!!
         # cycle of creating chessboard
         for i in range(0, self.__height):
             # if number of cells is even, cycle adds '░' in the beginning and removes last cell

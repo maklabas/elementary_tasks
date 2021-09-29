@@ -11,8 +11,9 @@ import io
 
 
 class TestChessBoard(unittest.TestCase):
-    @patch('chess_board.print')
+    # @patch('chess_board.ChessBoard.print_chessboard')
     # @patch('sys.stdout', new_callable=io.StringIO)
+    @patch('builtins.print')
     def test_print_chessboard(self, mocked_print):
         test_cases = [
 
@@ -34,8 +35,19 @@ class TestChessBoard(unittest.TestCase):
 
         for case in test_cases:
             ChessBoard(**case['in']).print_chessboard()
-            assert mocked_print.mock_called_once(case['out'])
-            # self.assertEqual(print(case['out']), ChessBoard(**case['in']).print_chessboard())
+            mocked_print.assert_called_with(case['out'])
+
+        ''' полурабочий выводит только одну строку
+        for case in test_cases:
+             ChessBoard(**case['in']).print_chessboard()
+             mocked_print.assert_called_with(case['out'])'''
+        # ChessBoard(2, 1).print_chessboard()
+        # mocked_print.assert_called_with('█')
+
+        # for case in test_cases:
+        #     ChessBoard(**case['in']).print_chessboard()
+        #     assert mocked_print.mock_called_once(case['out'])
+        #       self.assertEqual(print(case['out']), ChessBoard(**case['in']).print_chessboard())
 
 
 '''class TestChessBoard(unittest.TestCase):
