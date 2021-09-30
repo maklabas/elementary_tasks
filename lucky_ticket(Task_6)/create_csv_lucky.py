@@ -1,7 +1,7 @@
 import csv
 marker = input("Enter marker: ")
 with open("lucky_tickets.csv", mode='w', encoding='utf-8') as db:
-    # names = ['Moskow', 'Piter']
+    # names = ['Moscow', 'Piter']
     names = [marker]
     file_writer = csv.DictWriter(db, delimiter=',', lineterminator='\r', fieldnames=names)
     file_writer.writeheader()

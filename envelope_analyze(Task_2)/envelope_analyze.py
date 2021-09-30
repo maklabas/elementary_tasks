@@ -2,7 +2,7 @@ import re
 
 
 class Envelope:
-    """ Class which compares envelopes """
+    """ Class which defines envelope """
 
     def __init__(self, side_a, side_b):
         self.side_a = side_a
@@ -14,7 +14,7 @@ class Envelope:
         list_1.sort()
         list_2.sort()
 
-        return True if list_1[0] < list_2[0] and list_1[0] < list_2[0] else False
+        return True if list_1[0] < list_2[0] and list_1[1] < list_2[1] else False
 
     def __eq__(self, other):
         list_1 = [self.side_a, self.side_b]
@@ -25,34 +25,40 @@ class Envelope:
         return True if self.side_a == self.side_b and other.side_a == other.side_b else False
 
 
-def main(s1, s2, s3, s4):
+def main(s1, s2, s3, s4) -> str:
     """ Creates two objects of Envelope and compares if first can be put into second one"""
     try:
-        s1 = float(s1)
-        s2 = float(s2)
-        s3 = float(s3)
-        s4 = float(s4)
-        con1 = Envelope(s1, s2)
-        con2 = Envelope(s3, s4)
-        if con1 < con2:
-            return f"\nYou can put envelope with sides {con1.side_a}, {con1.side_b} " \
-                   f"into envelope with sides {con2.side_a}, {con2.side_b}\n"
-        elif con1 == con2:
-            return "Envelops are same"
+        s1 = abs(float(s1))
+        s2 = abs(float(s2))
+        s3 = abs(float(s3))
+        s4 = abs(float(s4))
+        if s1 and s2 and s3 and s4 != 0:
+
+            con1 = Envelope(s1, s2)
+            con2 = Envelope(s3, s4)
+            if con1 < con2:
+                return f"\nYou can put envelope with sides {con1.side_a}, {con1.side_b} " \
+                       f"into envelope with sides {con2.side_a}, {con2.side_b}\n"
+            elif con1 == con2:
+                return "\nEnvelops are same\n"
+            elif con1 > con2:
+                return f"\nYou can put envelope with sides {con2.side_a}, {con2.side_b} " \
+                       f"into envelope with sides {con1.side_a}, {con1.side_b}\n"
+            else:
+                return "\nYou can't put envelope into another one\n"
         else:
-            return f"\nYou can put envelope with sides {con2.side_a}, {con2.side_b}" \
-                   f"into envelope with sides {con1.side_a}, {con1.side_b}\n"
+            return "\nEnvelope has incorrect sides\n"
     except ValueError as e:
         return "\nWe can't convert " + re.findall("('.*')", e.__str__())[0] + " into a number.\n" \
-                "How to use:\n" \
-                "Enter two sides of the first envelope, then two sides of the second envelope step by step.\n"
+               "How to use:\n" \
+               "Enter two sides of the first envelope, then two sides of the second envelope step by step.\n"
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     while True:
         a_1 = input("\nEnter first side of the first envelope: ")
-        b_1 = input("Enter second side of the first envelope: ")
         a_2 = input("Enter first side of the second envelope: ")
+        b_1 = input("Enter second side of the first envelope: ")
         b_2 = input("Enter second side of the second envelope: ")
         print(main(a_1, a_2, b_1, b_2))
         guess = input("Do you want to continue? \n"
