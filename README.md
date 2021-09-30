@@ -45,7 +45,7 @@ Tasks Processing
  - [x] Task 2 (envelope_analyze)
  - [x] Task 3 (trianle_sort)
  - [x] Task 4 (file_parser)
- - [ ] Task 5 ()
+ - [ ] Task 5 (number_to_str)
  - [x] Task 6 (lucky_ticket)
  - [x] Task 7 (numbers_sequence)
  - [x] Task 8 (fibonacci_in_range)
@@ -53,7 +53,7 @@ Tasks Processing
   
    UnitTests :
   - [ ] Task 1 (chess_board) 
-  - [ ] Task 2 (envelope_analyze)
+  - [x] Task 2 (envelope_analyze)
   - [ ] Task 3 (triangle_sort)
   - [ ] Task 4 (file_parser)
   - [ ] Task 5 ()
