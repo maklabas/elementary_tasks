@@ -2,7 +2,7 @@ Elementary tasks Documentation
 ============================
 
 This repo contains tasks and tests
-of SoftServe Python Internship.
+of Python Internship.
 
 
 Quick Start
