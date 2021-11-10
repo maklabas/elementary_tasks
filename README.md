@@ -51,13 +51,4 @@ Tasks Processing
  - [x] Task 8 (fibonacci_in_range)
 
   
-   UnitTests :
-  - [ ] Task 1 (chess_board) 
-  - [x] Task 2 (envelope_analyze)
-  - [ ] Task 3 (triangle_sort)
-  - [ ] Task 4 (file_parser)
-  - [ ] Task 5 ()
-  - [ ] Task 6 (lucky_ticket)
-  - [ ] Task 7 (numbers_sequence)
-  - [ ] Task 8 (fibonacci_in_range)
 
